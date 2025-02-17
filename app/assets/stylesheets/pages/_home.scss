@@ -9,24 +9,50 @@
   justify-content: center;
 }
 
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+///// titre lien vers la page d'accueil /////
+.custom-link {
+  text-decoration: none;
+  color: black;
+  font-size: 2em;      /* Adaptez la taille si nécessaire.  'em' est relatif à la taille par défaut du navigateur. */
+  // font-weight: bold;   /* Optionnel: Pour rendre le texte plus gras comme un h1 */
 }
 
-/////// liste de ma navbar //////
-.navbar-nav {
+.custom-link:hover {
+  text-decoration: none; /* Empêche le soulignement au survol */
+  color: black; /* Conserve la même couleur au survol */
+}
+
+/////////
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100vh;
+  gap: 0;
+}
+
+.grid-item {
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
 }
 
-.nav-item {
-  margin: 0 15px;
+.grid-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgb(33, 37, 41);
+  padding: 100px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 10px;
 }
 
-@media (max-width: 576px) {
-  .nav-item {
-    margin: 10px 0;
-  }
+.grid-link:hover {
+  background-color: rgb(33, 37, 41);
+  transform: scale(1.1);
+  color: #fff;
 }
